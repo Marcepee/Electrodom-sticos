@@ -1,7 +1,7 @@
 abstract class Electrodomestico {
-    private String tipo;
-    private String marca;
-    private double potencia;
+    protected String tipo;
+    protected String marca;
+    protected double potencia;
     public Electrodomestico(String tipo, String marca, double potencia){
         this.tipo=tipo;
         this.marca=marca;
@@ -45,6 +45,6 @@ abstract class Electrodomestico {
     public abstract double getConsumo(int horas);
 
     public double getCosteConsumo(int horas, double costeHora){
-        return (getConsumo(horas)/horas)*costeHora;
+        return horas*costeHora;
     }
 }

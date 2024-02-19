@@ -17,9 +17,9 @@ public class Lavadora extends Electrodomestico {
     @Override
     public double getConsumo(int horas) {
         if (aguaCaliente){
-            return getPotencia()*getPotencia()*0.2;
+            return potencia*potencia*0.2;
         }else{
-            return horas*getPotencia();
+            return horas*potencia;
         }
     }
 
